@@ -8,6 +8,7 @@ import HowItWorks from './Components/Landingpage/Howitswork'
 import Hero from './Components/Landingpage/Hero'
 
 
+import Explore from './Components/Landingpage/Explore'
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
     <Student />
    
      
+     <Explore />
      <Footer />
      
    
