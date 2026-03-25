@@ -9,10 +9,11 @@ const App = () => {
   return (
     <div>
      <Header />
-     <Chef />
-     <Student />
-     <AdvantagesSection />
-     <HowItWorks />
+    <AdvantagesSection />
+    <HowItWorks />
+    <Chef />
+    <Student />
+   
      <Footer />
      
    
