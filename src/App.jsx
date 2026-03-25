@@ -1,14 +1,19 @@
 import React from 'react'
 import Header from './Components/Header/Header'
 import Footer from './Components/Footer/Footer'
+import AdvantagesSection from './Components/Landingpage/Advantages'
+import HowItWorks from './Components/Landingpage/Howitswork'
+
 
 const App = () => {
   return (
     <div>
-     <Header />
+     {/* <Header /> */}
+
+     {/* <Footer /> */}
      
-     <Footer />
-     
+     <AdvantagesSection />
+     <HowItWorks />
     </div>
   )
 }
