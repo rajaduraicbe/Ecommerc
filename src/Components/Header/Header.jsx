@@ -29,8 +29,9 @@ export default function Header() {
   };
 
   return (
-    <header className="w-full bg-white border-b border-orange-500 px-4 md:px-12 py-4">
+    <header className="w-full bg-white border-b border-orange-500 px-4 md:px-12 py-4 relative z-50">
       <div className="flex items-center justify-between">
+        
         {/* LOGO */}
         <h1 className="text-orange-600 font-extrabold text-2xl">COOK</h1>
 
@@ -41,8 +42,9 @@ export default function Header() {
           <div>🥘 Group Cooking</div>
         </div>
 
-        {/* RIGHT SIDE (TAB + DESKTOP) */}
-        <div className="hidden md:flex items-center gap-4 relative" ref={dropdownRef}>
+        {/* RIGHT SIDE */}
+        <div className="hidden md:flex items-center gap-4 relative z-50" ref={dropdownRef}>
+          
           {/* Language */}
           <div className="relative">
             <div onClick={toggleLang} className="flex items-center gap-1 cursor-pointer text-sm">
@@ -50,7 +52,7 @@ export default function Header() {
             </div>
 
             {langOpen && (
-              <div className="absolute top-10 bg-white border border-orange-500 shadow rounded p-2 w-40">
+              <div className="absolute top-10 bg-white border border-orange-500 shadow rounded p-2 w-40 z-50">
                 {['Tamil','Malayalam','Telugu','Hindi','Kannada'].map((lang) => (
                   <div key={lang} className="p-2 hover:bg-orange-100 cursor-pointer">{lang}</div>
                 ))}
@@ -65,7 +67,7 @@ export default function Header() {
             </div>
 
             {currencyOpen && (
-              <div className="absolute right-0 top-10 w-40 bg-white border border-orange-500 rounded shadow p-2">
+              <div className="absolute right-0 top-10 w-40 bg-white border border-orange-500 rounded shadow p-2 z-50">
                 {['IND','USA','EUR','AED'].map((c) => (
                   <div key={c} className="p-2 hover:bg-orange-100 cursor-pointer">{c}</div>
                 ))}
@@ -84,7 +86,7 @@ export default function Header() {
           </button>
         </div>
 
-       {/* MOBILE ONLY BUTTON */}
+        {/* MOBILE BUTTON */}
         <div className="md:hidden">
           <button onClick={() => setMenuOpen(!menuOpen)} className="bg-orange-500 text-white p-2 rounded-md">
             {menuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -94,14 +96,16 @@ export default function Header() {
 
       {/* MOBILE DROPDOWN */}
       {menuOpen && (
-        <div className="md:hidden mt-4 bg-white border rounded-lg shadow p-4">
+        <div className="md:hidden mt-4 bg-white border border-orange-500 rounded-lg shadow p-4 relative z-50">
+          
           <div className="flex flex-col gap-3 mb-4">
             <div className="p-2 hover:bg-orange-200 cursor-pointer">🍳 Cooking Classes</div>
             <div className="p-2 hover:bg-orange-200 cursor-pointer">👨‍🍳 Become A Chef</div>
             <div className="p-2 hover:bg-orange-200 cursor-pointer">🥘 Group Cooking</div>
           </div>
 
-          <div className="flex justify-between gap-4 border-t pt-4">
+          <div className="flex justify-between gap-4 border-t border-orange-500 pt-4">
+            
             {/* LANG */}
             <div className="w-1/2">
               <div onClick={toggleLang} className="flex justify-between cursor-pointer">
@@ -109,7 +113,7 @@ export default function Header() {
               </div>
 
               {langOpen && (
-                <div className="border mt-2">
+                <div className="border border-orange-500 mt-2">
                   {['Tamil','Malayalam','Telugu','Hindi','Kannada'].map((lang) => (
                     <div key={lang} className="p-2 hover:bg-orange-200 cursor-pointer">{lang}</div>
                   ))}
@@ -124,7 +128,7 @@ export default function Header() {
               </div>
 
               {currencyOpen && (
-                <div className="border mt-2">
+                <div className="border border-orange-500 mt-2">
                   {['IND','USA','EUR','AED'].map((c) => (
                     <div key={c} className="p-2 hover:bg-orange-200 cursor-pointer">{c}</div>
                   ))}

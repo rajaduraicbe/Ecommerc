@@ -102,7 +102,7 @@ export default function HeroSection() {
       </div>
 
       {/* ================= STATS CARD ================= */}
-      <div className="px-28 py-16 max-md:px-4">
+      <div className="px-28 md:px-4 lg:px-28 py-16 max-md:px-4">
         <div className="mt-16 relative border border-orange-200 rounded-xl bg-orange-50 py-8 max-md:py-6">
           
           {/* LEFT LINE (desktop only) */}
