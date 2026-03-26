@@ -23,8 +23,6 @@ const App = () => {
      <Explore />
      <Blog/>
      <Footer />
-     
-   
     </div>
   )
 }
