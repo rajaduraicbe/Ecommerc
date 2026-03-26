@@ -10,8 +10,8 @@ const App = () => {
   return (
     <div>
      <Header />
-     <Blog/>
      <Hero/>
+     <Blog/>
      <Footer />
      
     </div>
