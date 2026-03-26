@@ -15,13 +15,14 @@ const App = () => {
     <div>
      <Header />
      <Hero/>
+     <Explore />
     <AdvantagesSection />
     <HowItWorks />
     <Chef />
     <Student />
    
      
-     <Explore />
+     
      <Footer />
      
    
