@@ -1,5 +1,6 @@
 import React from 'react'
 import Header from './Components/Header/Header'
+import Blog from './Components/Landingpage/Coock blog'
 import Footer from './Components/Footer/Footer'
 import Chef from './Components/Landingpage/Chef'
 import Student from './Components/Landingpage/Student'
@@ -24,11 +25,9 @@ const App = () => {
     <Student />
    
      
-     
+     <Blog />
     
      <Footer />
-     
-   
     </div>
   )
 }
