@@ -5,6 +5,11 @@ export default function Header() {
   const [currencyOpen, setCurrencyOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+
+  // ✅ NEW STATES
+  const [selectedLang, setSelectedLang] = useState("Eng");
+  const [selectedCurrency, setSelectedCurrency] = useState("USD");
+
   const dropdownRef = useRef(null);
 
   useEffect(() => {
@@ -31,7 +36,7 @@ export default function Header() {
   return (
     <header className="w-full bg-white border-b border-[#D26622] px-4 md:px-12 py-4 relative z-50">
       <div className="flex items-center justify-between">
-        
+
         {/* LOGO */}
         <h1 className="text-[#D26622] font-extrabold text-2xl">COOK</h1>
 
@@ -48,13 +53,22 @@ export default function Header() {
           {/* Language */}
           <div className="relative">
             <div onClick={toggleLang} className="flex items-center gap-1 cursor-pointer text-sm">
-              Eng <ChevronDown size={14} className="text-[#D26622]" />
+              {selectedLang} <ChevronDown size={14} className="text-[#D26622]" />
             </div>
 
             {langOpen && (
               <div className="absolute top-10 bg-white border border-[#D26622] shadow rounded p-2 w-40 z-50">
                 {['Tamil','Malayalam','Telugu','Hindi','Kannada'].map((lang) => (
-                  <div key={lang} className="p-2 hover:bg-[#D26622]/20 cursor-pointer">{lang}</div>
+                  <div
+                    key={lang}
+                    onClick={() => {
+                      setSelectedLang(lang);
+                      setLangOpen(false);
+                    }}
+                    className="p-2 hover:bg-[#D26622]/20 cursor-pointer"
+                  >
+                    {lang}
+                  </div>
                 ))}
               </div>
             )}
@@ -63,13 +77,22 @@ export default function Header() {
           {/* Currency */}
           <div className="relative px-3">
             <div onClick={toggleCurrency} className="flex items-center gap-1 cursor-pointer text-sm">
-              USD <ChevronDown size={14} className="text-[#D26622]" />
+              {selectedCurrency} <ChevronDown size={14} className="text-[#D26622]" />
             </div>
 
             {currencyOpen && (
               <div className="absolute right-0 top-10 w-40 bg-white border border-[#D26622] rounded shadow p-2 z-50">
                 {['IND','USA','EUR','AED'].map((c) => (
-                  <div key={c} className="p-2 hover:bg-[#D26622]/20 cursor-pointer">{c}</div>
+                  <div
+                    key={c}
+                    onClick={() => {
+                      setSelectedCurrency(c);
+                      setCurrencyOpen(false);
+                    }}
+                    className="p-2 hover:bg-[#D26622]/20 cursor-pointer"
+                  >
+                    {c}
+                  </div>
                 ))}
               </div>
             )}
@@ -109,13 +132,22 @@ export default function Header() {
             {/* LANG */}
             <div className="w-1/2">
               <div onClick={toggleLang} className="flex justify-between cursor-pointer">
-                Eng <ChevronDown size={14} className="text-[#D26622]" />
+                {selectedLang} <ChevronDown size={14} className="text-[#D26622]" />
               </div>
 
               {langOpen && (
                 <div className="border border-[#D26622] mt-2">
                   {['Tamil','Malayalam','Telugu','Hindi','Kannada'].map((lang) => (
-                    <div key={lang} className="p-2 hover:bg-[#D26622]/20 cursor-pointer">{lang}</div>
+                    <div
+                      key={lang}
+                      onClick={() => {
+                        setSelectedLang(lang);
+                        setLangOpen(false);
+                      }}
+                      className="p-2 hover:bg-[#D26622]/20 cursor-pointer"
+                    >
+                      {lang}
+                    </div>
                   ))}
                 </div>
               )}
@@ -124,13 +156,22 @@ export default function Header() {
             {/* USD */}
             <div className="w-1/2">
               <div onClick={toggleCurrency} className="flex justify-between cursor-pointer">
-                USD <ChevronDown size={14} className="text-[#D26622]" />
+                {selectedCurrency} <ChevronDown size={14} className="text-[#D26622]" />
               </div>
 
               {currencyOpen && (
                 <div className="border border-[#D26622] mt-2">
                   {['IND','USA','EUR','AED'].map((c) => (
-                    <div key={c} className="p-2 hover:bg-[#D26622]/20 cursor-pointer">{c}</div>
+                    <div
+                      key={c}
+                      onClick={() => {
+                        setSelectedCurrency(c);
+                        setCurrencyOpen(false);
+                      }}
+                      className="p-2 hover:bg-[#D26622]/20 cursor-pointer"
+                    >
+                      {c}
+                    </div>
                   ))}
                 </div>
               )}
