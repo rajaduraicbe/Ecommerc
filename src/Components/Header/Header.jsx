@@ -137,7 +137,7 @@ export default function Header() {
 
               {langOpen && (
                 <div className="border border-[#D26622] mt-2">
-                  {['Tamil','Malayalam','Telugu','Hindi','Kannada'].map((lang) => (
+                  {['TAMIL','MALAYALAM','ENG','TELUGU','HINDI','KANNADA'].map((lang) => (
                     <div
                       key={lang}
                       onClick={() => {
@@ -161,7 +161,7 @@ export default function Header() {
 
               {currencyOpen && (
                 <div className="border border-[#D26622] mt-2">
-                  {['IND','USA','EUR','AED'].map((c) => (
+                  {['IND','USA','EUR','AED','USD'].map((c) => (
                     <div
                       key={c}
                       onClick={() => {
