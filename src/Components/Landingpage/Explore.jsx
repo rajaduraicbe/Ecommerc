@@ -62,11 +62,11 @@ export default function ExploreLearn() {
           </h1>
         </div>
 
-        {/* SEARCH (hidden on mobile) */}
+        {/* SEARCH */}
         <div className="hidden lg:flex items-center gap-2 font-semibold text-black cursor-pointer">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="w-5 h-5 text-orange-500"
+            className="w-5 h-5 text-[#D26622]"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -100,8 +100,8 @@ export default function ExploreLearn() {
               onClick={() => setActiveIndex(index)}
               className={`flex items-start sm:items-center gap-3 sm:gap-4 rounded-xl border p-3 sm:p-4 transition-all cursor-pointer ${
                 isActive
-                  ? "bg-orange-500 text-white border-orange-500"
-                  : "bg-white border-orange-400 text-orange-500"
+                  ? "bg-[#D26622] text-white border-[#D26622]"
+                  : "bg-white border-[#D26622] text-[#D26622]"
               }`}
             >
               {/* ICON */}
