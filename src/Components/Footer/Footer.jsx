@@ -1,6 +1,7 @@
 import React from "react";
 import { FaInstagram, FaTwitter, FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 
+
 const Footer = () => {
   return (
     /* px-0: Mobile (0px) and Tablet (768px) rendu pakkamum gap irukaathu.
