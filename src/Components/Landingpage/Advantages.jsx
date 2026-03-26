@@ -25,7 +25,7 @@ const advantages = [
 
 const AdvantagesSection = () => {
   return (
-    <section className="w-full bg-gray-50 py-16 px-4 md:px-8 lg:px-16">
+    <section className="w-full py-16 px-4 md:px-8 lg:px-16">
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 items-center">
         
         {/* LEFT IMAGE */}

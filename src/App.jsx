@@ -6,7 +6,6 @@ import Student from './Components/Landingpage/Student'
 import AdvantagesSection from './Components/Landingpage/Advantages'
 import HowItWorks from './Components/Landingpage/Howitswork'
 import Hero from './Components/Landingpage/Hero'
-import Hero from './Components/Landingpage/Hero'
 import Benifits from './Components/Landingpage/Benifits'
 
 
@@ -18,6 +17,7 @@ const App = () => {
      <Header />
      <Hero/>
      <Explore />
+      <Benifits/>
     <AdvantagesSection />
     <HowItWorks />
     <Chef />
@@ -25,7 +25,7 @@ const App = () => {
    
      
      
-     <Benifits/>
+    
      <Footer />
      
    
