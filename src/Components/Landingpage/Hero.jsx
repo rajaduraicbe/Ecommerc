@@ -13,7 +13,6 @@ export default function HeroSection() {
         <div className="max-md:order-2 md:order-2 lg:order-1 md:text-center md:col-span-2 lg:col-span-1 lg:text-left max-md:mt-16">
           
           <h1 className="text-4xl md:text-5xl max-md:text-3xl font-bold leading-tight text-gray-900">
-            
             {/* MOBILE → 3 LINES */}
             <span className="block md:hidden">
               Master the Art of <br />
@@ -38,7 +37,6 @@ export default function HeroSection() {
                 Worldwide
               </span>
             </span>
-
           </h1>
 
           <p className="text-gray-600 mt-6 text-md leading-relaxed max-w-xl max-md:mx-auto md:mx-auto lg:mx-0 max-md:text-sm">
@@ -70,19 +68,21 @@ export default function HeroSection() {
         <div className="flex justify-center md:justify-center lg:justify-end max-md:order-1 md:order-1 lg:order-2 md:col-span-2 lg:col-span-1">
           <div className="relative">
             
+            {/* ✅ FIXED: Bracket pixels replaced with Standard Tailwind Classes */}
             <img
               src={Hero}
               alt="Cooking"
-              className="w-[420px] h-[300px] object-cover rounded-2xl shadow-md md:w-[640px] md:h-[360px] lg:w-[420px] lg:h-[300px] max-md:w-[320px] max-md:h-[240px]"
+              className="w-105 h-75 object-cover rounded-2xl shadow-md md:w-160 md:h-90 lg:w-105 lg:h-75 max-md:w-80 max-md:h-60"
             />
 
             {/* REVIEW CARD */}
             <div className="
               absolute 
-              md:left-[-40px] md:bottom-[-10px] 
-              max-md:left-1/2 max-md:-translate-x-1/2 max-md:bottom-[-60px]
+              /* ✅ FIXED: Negative margins updated to standard Tailwind */
+              md:-left-10 md:-bottom-2.5 
+              max-md:left-1/2 max-md:-translate-x-1/2 max-md:-bottom-15
               lg:hidden
-              bg-white border border-orange-200 rounded-xl p-4 w-[220px] shadow-md
+              bg-white border border-orange-200 rounded-xl p-4 w-55 shadow-md
             ">
               <div className="flex items-center gap-2 mb-2">
                 <div className="w-8 h-8 bg-gray-300 rounded-full"></div>
@@ -105,42 +105,33 @@ export default function HeroSection() {
       <div className="px-28 md:px-4 lg:px-28 py-16 max-md:px-4">
         <div className="mt-16 relative border border-orange-200 rounded-xl bg-orange-50 py-8 max-md:py-6">
           
-          {/* LEFT LINE (desktop only) */}
-          <div className="absolute left-0 top-1/2 -translate-y-1/2 w-8 h-[1px] bg-orange-300 max-md:hidden"></div>
+          {/* ✅ FIXED: h-[1px] updated to h-px */}
+          <div className="absolute left-0 top-1/2 -translate-y-1/2 w-8 h-px bg-orange-300 max-md:hidden"></div>
+          <div className="absolute right-0 top-1/2 -translate-y-1/2 w-8 h-px bg-orange-300 max-md:hidden"></div>
 
-          {/* RIGHT LINE (desktop only) */}
-          <div className="absolute right-0 top-1/2 -translate-y-1/2 w-8 h-[1px] bg-orange-300 max-md:hidden"></div>
-
-          {/* CONTENT */}
           <div className="px-12 max-md:px-4">
             <div className="grid grid-cols-1 md:grid-cols-4 text-center gap-6">
-              
               <div>
                 <h2 className="text-orange-500 text-3xl max-md:text-xl font-extrabold">100+</h2>
                 <p className="text-gray-600 text-md max-md:text-xs mt-1">Talented Chefs</p>
               </div>
-
               <div>
                 <h2 className="text-orange-500 text-3xl max-md:text-xl font-extrabold">1000+</h2>
                 <p className="text-gray-600 text-md max-md:text-xs mt-1">Students</p>
               </div>
-
               <div>
                 <h2 className="text-orange-500 text-3xl max-md:text-xl font-extrabold">4.8 ★</h2>
                 <p className="text-gray-600 text-md max-md:text-xs mt-1">Rating</p>
               </div>
-
               <div>
                 <h2 className="text-orange-500 text-3xl max-md:text-xl font-extrabold">20+</h2>
                 <p className="text-gray-600 text-md max-md:text-xs mt-1">Cooking Categories</p>
               </div>
-
             </div>
           </div>
 
         </div>
       </div>
-
     </div>
   );
 }
